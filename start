@@ -1,6 +1,6 @@
 #! /bin/bash
 
-docker kill branch-publish
-docker rm branch-publish
+docker kill jekyll-site-from-github
+docker rm jekyll-site-from-github
 
-docker run -d -v /tmp/sitelogs:/site/logs -p 80 --name branch-publish kamon/branch-publish:latest kamon-io/kamon.io master
+docker run -d -v /tmp/sitelogs:/site/logs -p 80 --name jekyll-site-from-github kamon/jekyll-site-from-github:latest kamon-io/kamon.io master

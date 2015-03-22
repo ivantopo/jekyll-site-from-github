@@ -1,0 +1,6 @@
+#! /bin/bash
+
+docker kill branch-publish
+docker rm branch-publish
+
+docker run -d -v /tmp/sitelogs:/site/logs -p 80 --name branch-publish kamon/branch-publish:latest kamon-io/kamon.io master
